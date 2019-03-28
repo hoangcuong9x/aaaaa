@@ -12,40 +12,121 @@
     <title>Color Pictures</title>
 </head>
 <body>
-    <div id="menu">
-        <ul class="nav">
-            <li><a href="{{ url_for('home') }}">Homepage</a></li>          
-            {% if 'token' in session %}
-                <li><a href="{{ url_for('profile', artist=session['token']) }}">My Arts</a></li>
-                <li><a href="{{ url_for('logout') }}">Log out</a></li>
-            {% else %}
-                <li><a href="{{ url_for('login') }}">Log in</a></li>
-                <li><a href="{{ url_for('signup') }}">Sign up</a></li>
-            {% endif %}
-        </ul>
-    </div>
-    <section class="buttons">
-        <div class="container">
-            <div id="main">
-                <h4 style="font-size: 40px; color: white">Category</h3>
-                <div class="img">
-                    <div class="abcd">
-                        <a href="{{ url_for('new_picture', picid=random_pic.id) }}" class="btn btn-1">Random pic</a>
-                        <a href="{{ url_for('new_picture', picid=random_pic.id) }}">
-                            <img src="{{ random_pic.piclink }}" alt="">
-                        </a>
-                    </div>
-                    {% for c in category_list %}
-                    <div class="abcd">
-                        <a href="{{ url_for('one_category', category=c.category) }}" class="btn btn-1">{{ c.name }}</a>
-                        <a href="{{ url_for('one_category', category=c.category) }}">
-                            <img src="{{ c.label }}" alt="" width="20%" height="20%">
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
+    <div id="header">
+        <header id="div-header">
+            <div id="logo-header">
+                <img class="logo-header" style="height: 21px" src="https://www.secomapp.com/wp-content/uploads/2017/10/logo.png" alt="">
             </div>
-        </div>    
-    </section>
+            <div id="nav-header">
+                <nav>
+                    <ul id="ul-header">
+                        <li class="active"><a href="">Home</a></li>
+                        <li><a href="">Affiliate Program</a></li>
+                        <li><a href="">App</a>
+                            <i class="q_menu_arrow fa fa-angle-down"></i>
+                            <ul class="menu-1">
+                                <li><a class="sub-menu" href=""></a>Quick View App</li>
+                                <li><a class="sub-menu" href=""></a>Store Locator App</li>
+                                <li><a class="sub-menu" href=""></a>Promotion Popup App</li>
+                                <li><a class="sub-menu" href=""></a>Currency Switcher App</li>
+                                <li><a class="sub-menu" href=""></a>Store Pickup App</li>
+                                <li><a class="sub-menu" href=""></a>Free Gifts App</li>
+                                <li><a class="sub-menu" href=""></a>Customer Attribute App</li>
+                                <li><a class="sub-menu" href=""></a>Banner Slider App</li>
+                                <li><a class="sub-menu" href=""></a>Product Labels App</li>
+                                <li><a class="sub-menu" href=""></a>Spin To Win App</li>
+                            </ul>
+                        </li>
+                        <li><a href="">EXperts</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Blog</a>
+                            <ul class="menu-2">
+                                <li><a class="sub-menu" href=""></a>Success Stories</li>
+                                <li><a class="sub-menu" href=""></a>Shopify Tips</li>
+                                <li><a class="sub-menu" href=""></a>Tutorials</li>
+                                <li><a class="sub-menu" href=""></a>News & Updates</li>
+                            </ul>
+                        </li>
+                        <li><a href=""></a></li>
+                    </ul>   
+                </nav> 
+            </div>
+        </header>
+            <div id="intro">
+                <h1>WELCOME TO SECOMAPP!</h1>
+                <p>We build useful shopify apps.</p>
+                <p style="margin-top: 0">Use our apps to INCREASE YOUR SALES.</p>
+                <div class="btn"><a href="">VIEW OUR APPS</a></div>
+            </div>
+            <!-- <canvas class="particles-js-canvas-el" width="1301" height="633" style="width: 100%; height: 20px;"></canvas> -->
+    </div>
+    <div id="js-1">
+        js
+    </div>
+    <div id="contact">
+        <div>
+            <img class="img-contact" src="https://www.secomapp.com/wp-content/uploads/2015/11/tech-image-5.png" alt="">
+        </div>
+        <div class="content-contact">
+            <h1>Need Any Help? Our 5-Star Support Will Help You.</h1>
+            <a href="">CONTACT US</a>
+        </div>
+        
+    </div>
+    <div id="js-2">
+        js2
+    </div>
+    <div id="join-now">
+        <h1 class="content-contact" style="text-align: center">Join our affiliate program</h1>
+        <a href="">JOIN NOW</a>
+    </div>
+
+    <div id="home-footer">
+        <div id="menu-footer">
+            <img src="https://www.secomapp.com/wp-content/uploads/2017/10/logo.png">
+            <p>support@secomapp.com</p>
+            <input type="emmail" name="" placeholder="Your E-mail">
+            <div id="fb-tw">
+                <a href="https://www.facebook.com/secomapp">fb</a>
+                <a href="https://twitter.com/secomapp">tw</a>
+            </div>
+        </div>
+        <div id="menu-footer">
+            <h2>ABOUT US</h2>
+            <a href="">About</a>
+            <a href="">Support</a>
+            <a href="">FAQs</a>
+            <a href="">Blog</a>
+            <a href="">Shopify.com</a>
+        </div>
+        <div id="menu-footer">
+            <h2>SHOPIFY APPS</h2>
+            <a href="">Currency Switcher App</a>
+            <a href="">Customer Attribute App</a>
+            <a href="">Free Gift App</a>
+            <a href="">Product labels App</a>
+            <a href="">Promotion Popup App</a>
+            <a href="">Banner Slider App</a>
+            <a href="">Quick View App</a>
+            <a href="">Spin To Win App</a>
+            <a href="">Store Locator App</a>
+            <a href="">Store Pickup App</a>
+        </div>
+        <div style="border-right: none" id="menu-footer">
+            <h2>OUR SERVICE</h2>
+            <a href="">Request App Installation</a>
+            <a href="">Request A Feature</a>
+            <a href="">Request An App</a>
+            <a href="">Resources</a>
+            <a href="">Terms & conditions</a>
+            <a href="">Privacy policy</a>
+            <a href="">Affiliate documentation</a>
+        </div>
+
+    </div>
+    <footer id="home-ft">
+        © 2014 Secomapp.com. All Rights Reserved.
+    </footer>
 </body>
 </html>
